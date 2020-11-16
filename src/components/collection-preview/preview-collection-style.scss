@@ -1,0 +1,29 @@
+.collection-preview {    
+
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    font-weight: 800;
+    
+    
+    .title {
+      text-transform: uppercase;
+      font-size: 28px;
+      margin-bottom: 25px;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  
+    .preview {
+      color: #4a4a4a;
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-around;
+      width: 100%;
+      
+      
+    }
+}
