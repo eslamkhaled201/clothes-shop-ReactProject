@@ -6,8 +6,7 @@ import NavBar from './components/nav-bar/nav-bar';
 import Shop from './pages/shop-page/shop';
 import { SignInSignUpPage } from './pages/signIn-sign-up-page/signIn-sign-up';
 
-let currnetLocation = location;
-console.log(currnetLocation);
+
 class App extends React.Component {
   constructor() {
     super();
