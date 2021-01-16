@@ -5,8 +5,8 @@ import { Route, Switch } from 'react-router-dom';
 import NavBar from './components/nav-bar/nav-bar';
 import Shop from './pages/shop-page/shop';
 import { SignInSignUpPage } from './pages/signIn-sign-up-page/signIn-sign-up';
-
-
+let URLOrigin = `${location.origin}`;
+console.log(location);
 class App extends React.Component {
   constructor() {
     super();
@@ -23,9 +23,9 @@ class App extends React.Component {
         <div className='main'>
         
           <Switch>
-            <Route exact path='https://react-clothes-shop.netlify.app/' component={HomePage} />
-            <Route exact path='https://react-clothes-shop.netlify.app/shop' component={Shop} />
-            <Route exact path='https://react-clothes-shop.netlify.app/logIn' component={SignInSignUpPage} />
+            <Route exact path={`${URLOrigin}/`} component={HomePage} />
+            <Route exact path={`${URLOrigin}/shop`} component={Shop} />
+            <Route exact path={`${URLOrigin}/logIn`} component={SignInSignUpPage} />
           </Switch>
         </div>
       </div>
