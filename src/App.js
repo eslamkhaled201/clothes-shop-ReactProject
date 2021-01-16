@@ -6,7 +6,8 @@ import NavBar from './components/nav-bar/nav-bar';
 import Shop from './pages/shop-page/shop';
 import { SignInSignUpPage } from './pages/signIn-sign-up-page/signIn-sign-up';
 
-
+let currnetLocation = location;
+console.log(currnetLocation);
 class App extends React.Component {
   constructor() {
     super();
@@ -15,15 +16,17 @@ class App extends React.Component {
     }
   }
 
+  
   render() {
     return (
       <div className="App ">
         <NavBar currentUser={this.state.currentUser}></NavBar>
         <div className='main'>
+        
           <Switch>
-            <Route exact path='https://eslamkhaled201.github.io/clothes-shop-ReactProject/' component={HomePage} />
-            <Route exact path='https://eslamkhaled201.github.io/clothes-shop-ReactProject/shop' component={Shop} />
-            <Route exact path='https://eslamkhaled201.github.io/clothes-shop-ReactProject/logIn' component={SignInSignUpPage} />
+            <Route exact path='https://react-clothes-shop.netlify.app/' component={HomePage} />
+            <Route exact path='https://react-clothes-shop.netlify.app/shop' component={Shop} />
+            <Route exact path='https://react-clothes-shop.netlify.app/logIn' component={SignInSignUpPage} />
           </Switch>
         </div>
       </div>
