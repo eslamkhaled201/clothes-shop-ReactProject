@@ -23,9 +23,9 @@ class App extends React.Component {
         <div className='main'>
         
           <Switch>
-            <Route exact path={`${URLOrigin}/`} component={HomePage} />
-            <Route exact path={`${URLOrigin}/shop`} component={Shop} />
-            <Route exact path={`${URLOrigin}/logIn`} component={SignInSignUpPage} />
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/shop" component={Shop} />
+            <Route exact path="/logIn" component={SignInSignUpPage} />
           </Switch>
         </div>
       </div>
