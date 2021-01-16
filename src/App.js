@@ -5,14 +5,16 @@ import { Route, Switch } from 'react-router-dom';
 import NavBar from './components/nav-bar/nav-bar';
 import Shop from './pages/shop-page/shop';
 import { SignInSignUpPage } from './pages/signIn-sign-up-page/signIn-sign-up';
-let URLOrigin = `${location.origin}`;
-console.log(location);
+
+
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       currentUser: null
     }
+    console.log("🚀 ~ file: App.js ~ line 14 ~ App ~ constructor ~ props", props)
+
   }
 
   
@@ -21,9 +23,9 @@ class App extends React.Component {
       <div className="App ">
         <NavBar currentUser={this.state.currentUser}></NavBar>
         <div className='main'>
-        
+        <Route exact path="/" component={HomePage} />
+
           <Switch>
-            <Route exact path="/" component={HomePage} />
             <Route exact path="/shop" component={Shop} />
             <Route exact path="/logIn" component={SignInSignUpPage} />
           </Switch>
