@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0a985e88b50df6bb7cbd0e705f79841c",
+    "revision": "45b7b22b5fa213d01be877879348a000",
     "url": "/clothes-shop-ReactProject/index.html"
   },
   {
-    "revision": "65e874ef21613f3d71e9",
+    "revision": "d75faf290585a9331310",
     "url": "/clothes-shop-ReactProject/static/css/main.172fefc6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clothes-shop-ReactProject/static/js/2.0839fb13.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65e874ef21613f3d71e9",
-    "url": "/clothes-shop-ReactProject/static/js/main.f8f1393c.chunk.js"
+    "revision": "d75faf290585a9331310",
+    "url": "/clothes-shop-ReactProject/static/js/main.aced39c1.chunk.js"
   },
   {
     "revision": "691eeeab304a17fbe2be",
