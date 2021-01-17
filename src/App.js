@@ -8,26 +8,29 @@ import { SignInSignUpPage } from './pages/signIn-sign-up-page/signIn-sign-up';
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor({ location }) {
+    const mainPath = location.pathname;
+    super();
     this.state = {
-      currentUser: null
+      currentUser: null,
+      mainPath: mainPath
     }
-    console.log("🚀 ~ file: App.js ~ line 14 ~ App ~ constructor ~ props", props)
 
   }
 
-  
+
   render() {
     return (
       <div className="App ">
-        <NavBar currentUser={this.state.currentUser}></NavBar>
-        <div className='main'>
-        <Route exact path="/" component={HomePage} />
 
+        <div className='main'>
+          <Route exact={false} path="/" >
+            <NavBar currentUser={this.state.currentUser} mainPath={this.state.mainPath} />
+          </Route>
+          <Route exact path={`${this.state.mainPath}`}  ><HomePage /> </Route>
           <Switch>
-            <Route exact path="/shop" component={Shop} />
-            <Route exact path="/logIn" component={SignInSignUpPage} />
+            <Route exact path={`${this.state.mainPath}shop`} params={1} component={Shop} />
+            <Route exact path={`${this.state.mainPath}logIn`} ><SignInSignUpPage /> </Route>
           </Switch>
         </div>
       </div>
